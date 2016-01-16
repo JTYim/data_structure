@@ -12,6 +12,7 @@ var TreeNode = function(value) {
   this.right = null;
 }
 
+// O(log n)
 BinarySearchTree.prototype.insert = function(value) {
   var newNode=new TreeNode(value);
   if(this.value===null) {
@@ -30,6 +31,7 @@ BinarySearchTree.prototype.insert = function(value) {
 
 };
 
+// O(log n)
 BinarySearchTree.prototype.contains = function(value) {
   var found=false;
   search(this);
@@ -44,6 +46,7 @@ BinarySearchTree.prototype.contains = function(value) {
   return found;
 };
 
+// O(log n)
 BinarySearchTree.prototype.depthFirstLog = function(cb) {
   traverse(this);
   function traverse(node) {
